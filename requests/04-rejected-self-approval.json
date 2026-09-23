@@ -1,0 +1,14 @@
+{
+  "event_id": "EVT-DEMO-1004",
+  "action": "joiner",
+  "ticket_id": "IAM-1004",
+  "requested_by": "same.person",
+  "approved_by": "same.person",
+  "reason": "This deliberately invalid request proves self-approval is blocked.",
+  "username": "blocked.example",
+  "first_name": "Blocked",
+  "last_name": "Example",
+  "email": "blocked.example@example.test",
+  "department": "IAM Operations"
+}
+

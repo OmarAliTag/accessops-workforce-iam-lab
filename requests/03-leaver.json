@@ -1,0 +1,10 @@
+{
+  "event_id": "EVT-DEMO-1003",
+  "action": "leaver",
+  "ticket_id": "IAM-1003",
+  "requested_by": "hr.partner",
+  "approved_by": "iam.reviewer",
+  "reason": "Employment ended; access must be disabled and sessions revoked.",
+  "username": "nadia.hassan"
+}
+

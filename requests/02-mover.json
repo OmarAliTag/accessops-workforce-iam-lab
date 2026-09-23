@@ -1,0 +1,12 @@
+{
+  "event_id": "EVT-DEMO-1002",
+  "action": "mover",
+  "ticket_id": "IAM-1002",
+  "requested_by": "operations.manager",
+  "approved_by": "iam.reviewer",
+  "reason": "Internal transfer from Finance requesting to Operations.",
+  "username": "nadia.hassan",
+  "from_department": "Finance Requesting",
+  "to_department": "Operations"
+}
+

@@ -1,0 +1,14 @@
+{
+  "event_id": "EVT-DEMO-1001",
+  "action": "joiner",
+  "ticket_id": "IAM-1001",
+  "requested_by": "hr.partner",
+  "approved_by": "finance.manager",
+  "reason": "New starter requires the Finance requesting access baseline.",
+  "username": "nadia.hassan",
+  "first_name": "Nadia",
+  "last_name": "Hassan",
+  "email": "nadia.hassan@example.test",
+  "department": "Finance Requesting"
+}
+

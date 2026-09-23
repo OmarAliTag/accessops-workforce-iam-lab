@@ -1,6 +1,6 @@
 # AccessOps — Workforce IAM Lifecycle Lab
 
-AccessOps is a beginner-friendly but substantive identity and access management project. It turns synthetic HR change requests into controlled **joiner, mover, and leaver** actions in Keycloak, protects a Flask portal with **OpenID Connect**, maps groups to **least-privilege roles**, requires **TOTP enrollment** for privileged access, and produces reviewable audit evidence.
+AccessOps is a reproducible identity and access management project. It turns synthetic HR change requests into controlled **joiner, mover, and leaver** actions in Keycloak, protects a Flask portal with **OpenID Connect**, maps groups to **least-privilege roles**, requires **TOTP enrollment** for privileged access, and produces reviewable audit evidence.
 
 > Portfolio learning project. It is not affiliated with Deloitte, Keycloak, or Okta, and it does not claim production IAM/PAM product ownership.
 
@@ -87,7 +87,7 @@ Then open a third terminal for the lifecycle story:
 .\.venv\Scripts\python.exe -m pytest
 ```
 
-For every click and command—including what it does, how it works, why it exists, expected evidence, and recovery steps—follow the [beginner walkthrough](docs/BEGINNER_WALKTHROUGH.md).
+For operational recovery and common startup issues, use the [runbook](docs/RUNBOOK.md).
 
 ## Demo identities
 
@@ -110,16 +110,10 @@ portal/                    OIDC Flask app and responsive UI
 requests/                  Synthetic approved and rejected change requests
 scripts/                   Setup, configuration, lifecycle, review, and verification tools
 tests/                     Positive and negative automated checks
-docs/                      Walkthrough, design, runbook, research, and interview guide
+docs/                      Architecture, runbook, research, and migration notes
 evidence/                  Sanitized sample and verification summary; live logs stay ignored
 compose.yaml               Optional, unverified-on-this-PC container profile
 ```
-
-## A 45-second phone explanation
-
-> I built a small workforce IAM lifecycle lab around a common client problem: access becoming wrong during onboarding, transfers, and offboarding. I used Keycloak locally as a reproducible standards-based identity provider, a Python service to automate joiner, mover, and leaver changes through REST and JSON, and a Flask portal secured with OIDC. Group membership drives least-privilege roles, privileged access requires TOTP enrollment, mover access is removed before replacement access is added, and leavers are disabled with sessions revoked. I added negative tests, idempotent retries, an access review, and a tamper-evident audit trail. It is a learning lab—not a claim of production SailPoint, CyberArk, or Okta experience—but it exercises the implementation, testing, troubleshooting, and operations habits in the role.
-
-The shorter and longer versions are in the [hiring-manager guide](docs/HIRING_MANAGER_GUIDE.md).
 
 ## Honest boundaries
 
@@ -127,10 +121,8 @@ This is a local development lab using synthetic data, HTTP loopback, Keycloak's 
 
 ## Documentation
 
-- [Beginner walkthrough](docs/BEGINNER_WALKTHROUGH.md)
 - [Architecture and design decisions](docs/ARCHITECTURE.md)
 - [Deloitte requirement-to-evidence map](docs/CONTROL_MATRIX.md)
 - [Troubleshooting and hyper-care runbook](docs/RUNBOOK.md)
 - [Research and primary sources](docs/RESEARCH.md)
 - [Okta migration map](docs/OKTA_MIGRATION.md)
-- [Hiring-manager phone and demo guide](docs/HIRING_MANAGER_GUIDE.md)

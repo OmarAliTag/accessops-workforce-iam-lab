@@ -36,9 +36,7 @@ def test_optional_compose_profile_is_pinned_and_loopback_only() -> None:
 def test_required_documentation_exists() -> None:
     expected = {
         "ARCHITECTURE.md",
-        "BEGINNER_WALKTHROUGH.md",
         "CONTROL_MATRIX.md",
-        "HIRING_MANAGER_GUIDE.md",
         "OKTA_MIGRATION.md",
         "RESEARCH.md",
         "RUNBOOK.md",

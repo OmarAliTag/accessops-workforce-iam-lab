@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}Identity dashboard · AccessOps{% endblock %}
+{% block content %}
+<section class="page-head grid-shell">
+  <div>
+    <p class="eyebrow">AUTHENTICATED IDENTITY</p>
+    <h1>{{ identity.name }}</h1>
+    <p class="lede">These values came from the signed OIDC identity flow, not from a local profile form.</p>
+  </div>
+  <div class="identity-badge">
+    <span>SESSION</span>
+    <strong>ACTIVE</strong>
+  </div>
+</section>
+
+<section class="section grid-shell data-grid">
+  <article class="data-card"><span>USERNAME</span><strong>{{ identity.username }}</strong></article>
+  <article class="data-card"><span>EMAIL</span><strong>{{ identity.email }}</strong></article>
+  <article class="data-card"><span>SUBJECT ID</span><strong class="mono wrap">{{ identity.subject }}</strong></article>
+  <article class="data-card wide">
+    <span>EFFECTIVE LAB ROLES</span>
+    <div class="chips">
+      {% for role in identity.roles %}<span>{{ role }}</span>{% else %}<span class="warning">No mapped role</span>{% endfor %}
+    </div>
+  </article>
+</section>
+
+<section class="section grid-shell">
+  <div class="section-intro"><p class="eyebrow">AUTHORIZATION TEST</p><h2>Try each protected route</h2></div>
+  <div class="control-grid three">
+    <article><h3>Helpdesk tickets</h3><p>Requires <code>ticket-reader</code>.</p><a class="text-link" href="{{ url_for('tickets') }}">Test route →</a></article>
+    <article><h3>IAM administration</h3><p>Requires <code>iam-admin</code>.</p><a class="text-link" href="{{ url_for('iam_admin') }}">Test route →</a></article>
+    <article><h3>Audit evidence</h3><p>Requires <code>auditor</code> or <code>iam-admin</code>.</p><a class="text-link" href="{{ url_for('audit') }}">Test route →</a></article>
+  </div>
+</section>
+{% endblock %}
+

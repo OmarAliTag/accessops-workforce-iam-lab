@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="AccessOps workforce IAM lifecycle lab">
+  <title>{% block title %}AccessOps IAM Lab{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="{{ url_for('home') }}" aria-label="AccessOps home">
+      <span class="brand-mark">AO</span>
+      <span><strong>ACCESSOPS</strong><small>WORKFORCE IAM LAB</small></span>
+    </a>
+    <nav aria-label="Primary navigation">
+      {% if current_identity %}
+        <a href="{{ url_for('dashboard') }}">Dashboard</a>
+        <a href="{{ url_for('tickets') }}">Tickets</a>
+        <a href="{{ url_for('iam_admin') }}">IAM Admin</a>
+        <a href="{{ url_for('audit') }}">Audit</a>
+        <a class="button button-quiet" href="{{ url_for('logout') }}">Sign out</a>
+      {% else %}
+        <a class="button" href="{{ url_for('login') }}">Sign in with Keycloak</a>
+      {% endif %}
+    </nav>
+  </header>
+
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer>
+    <span>Local learning environment · synthetic identities only</span>
+    <span>OIDC · RBAC · JML · REST/JSON · AUDIT</span>
+  </footer>
+</body>
+</html>
+

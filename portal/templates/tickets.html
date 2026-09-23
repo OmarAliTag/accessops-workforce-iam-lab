@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Helpdesk tickets · AccessOps{% endblock %}
+{% block content %}
+<section class="page-head grid-shell">
+  <div><p class="eyebrow">AUTHORIZED RESOURCE</p><h1>Helpdesk queue</h1><p class="lede">If you can see this table, Keycloak issued <code>ticket-reader</code> and the Flask route enforced it.</p></div>
+  <div class="identity-badge"><span>DECISION</span><strong>ALLOW</strong></div>
+</section>
+<section class="section grid-shell">
+  <div class="table-wrap">
+    <table><thead><tr><th>Ticket</th><th>Service</th><th>Severity</th><th>Status</th></tr></thead>
+    <tbody>{% for ticket in tickets %}<tr><td class="mono">{{ ticket.id }}</td><td>{{ ticket.service }}</td><td>{{ ticket.severity }}</td><td>{{ ticket.status }}</td></tr>{% endfor %}</tbody></table>
+  </div>
+  <p class="caption">Synthetic records. No customer or employer data is used.</p>
+</section>
+{% endblock %}
+

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}IAM administration · AccessOps{% endblock %}
+{% block content %}
+<section class="page-head grid-shell">
+  <div><p class="eyebrow">PRIVILEGED RESOURCE</p><h1>IAM operations</h1><p class="lede">This route requires <code>iam-admin</code>. The seeded privileged identity must enroll TOTP before first access.</p></div>
+  <div class="identity-badge"><span>CONTROL</span><strong>MFA + RBAC</strong></div>
+</section>
+<section class="section grid-shell control-grid three">
+  <article><span class="step">J</span><h3>Joiner</h3><p>Create one synthetic identity and attach the minimum department groups.</p></article>
+  <article><span class="step">M</span><h3>Mover</h3><p>Remove obsolete groups before adding the destination baseline.</p></article>
+  <article><span class="step">L</span><h3>Leaver</h3><p>Remove managed groups, disable the identity, and revoke sessions.</p></article>
+</section>
+<section class="section grid-shell note-panel"><strong>Why this screen is read-only</strong><p>Lifecycle changes stay in the reviewed Python CLI, where ticket metadata, separation of duties, idempotency, and audit evidence are mandatory. The browser cannot bypass those gates.</p></section>
+{% endblock %}
+

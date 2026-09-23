@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block title %}AccessOps · Workforce IAM Lab{% endblock %}
+{% block content %}
+<section class="hero grid-shell">
+  <div class="hero-copy">
+    <p class="eyebrow">PORTFOLIO PROJECT / IDENTITY ENGINEERING</p>
+    <h1>Right access.<br><span>Right time.</span><br>Proof included.</h1>
+    <p class="lede">A reproducible workforce IAM lab that turns joiner, mover, and leaver requests into least-privilege access—with OIDC sign-in, role checks, MFA enrollment, audit evidence, and negative tests.</p>
+    <div class="hero-actions">
+      <a class="button" href="{{ url_for('login') }}">Launch identity flow</a>
+      <a class="text-link" href="#control-flow">Inspect the controls →</a>
+    </div>
+  </div>
+  <aside class="status-panel" aria-label="Lab status">
+    <div class="panel-heading"><span>CONTROL PLANE</span><span class="status-dot">LOCAL</span></div>
+    <dl class="metrics">
+      <div><dt>Identity provider</dt><dd>Keycloak 26.7.4</dd></div>
+      <div><dt>Authentication</dt><dd>OIDC code flow</dd></div>
+      <div><dt>Authorization</dt><dd>Group → role RBAC</dd></div>
+      <div><dt>Lifecycle</dt><dd>Python Admin REST</dd></div>
+      <div><dt>Evidence</dt><dd>Hash-chained JSONL</dd></div>
+    </dl>
+  </aside>
+</section>
+
+<section id="control-flow" class="section grid-shell">
+  <div class="section-intro">
+    <p class="eyebrow">HIRE-TO-RETIRE</p>
+    <h2>One lifecycle, four control boundaries</h2>
+  </div>
+  <div class="control-grid">
+    <article><span class="step">01</span><h3>Validate</h3><p>Require a ticket, separate requester and approver, and synthetic data.</p></article>
+    <article><span class="step">02</span><h3>Provision</h3><p>Apply a department baseline through Keycloak groups and roles.</p></article>
+    <article><span class="step">03</span><h3>Enforce</h3><p>Allow or deny portal routes from OIDC role claims.</p></article>
+    <article><span class="step">04</span><h3>Prove</h3><p>Record before/after state and verify the audit hash chain.</p></article>
+  </div>
+</section>
+
+<section class="section two-column grid-shell">
+  <div>
+    <p class="eyebrow">DEMO IDENTITIES</p>
+    <h2>Safe data by design</h2>
+    <p>Every name, email, password, ticket, and helpdesk record is fictional. The workflow rejects non-<code>example.test</code> joiners.</p>
+  </div>
+  <div class="terminal-card">
+    <div class="terminal-title">$ demo_accounts</div>
+    <p><strong>nour.helpdesk</strong><br><span>portal-user · ticket-reader</span></p>
+    <p><strong>dina.auditor</strong><br><span>iam-admin · auditor · TOTP required</span></p>
+  </div>
+</section>
+{% endblock %}
+

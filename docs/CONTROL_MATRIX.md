@@ -4,7 +4,7 @@ This document keeps the portfolio claims specific and defensible.
 
 ## Deloitte role alignment
 
-| Public role signal | Project evidence | What Omar can truthfully say | What this does not prove |
+| Public role signal | Project evidence | Defensible project claim | What this does not prove |
 | --- | --- | --- | --- |
 | IAM implementation and operation | `keycloak/accessops-realm.json`, `scripts/configure_realm.py`, live runbook | Configured and operated a local IAM learning environment | Production IAM platform ownership |
 | OAuth, REST, and JSON | OIDC portal plus Keycloak Admin REST lifecycle adapter | Implemented an OIDC client and REST/JSON provisioning workflow | Enterprise federation programme delivery |
@@ -12,7 +12,7 @@ This document keeps the portfolio claims specific and defensible.
 | Testing across scenarios | `tests/`, live positive/negative browser checks | Tested success, denial, validation failure, idempotency, and tamper detection | Formal enterprise test-lead experience |
 | Troubleshooting auth/provisioning | Managed-attribute defect and documented recovery | Diagnosed a live provider read-back mismatch and fixed the realm schema | Breadth across every commercial IAM product |
 | Containers | Optional `compose.yaml` plus pinned Keycloak image | Understands how the same realm can be mounted into the official image | A verified Docker run on the development PC |
-| Knowledge transfer | Walkthrough, architecture, runbook, phone guide | Produced step-by-step technical handover documentation | Client training delivery under a formal engagement |
+| Knowledge transfer | Architecture and runbook | Produced implementation and operational handover documentation | Client training delivery under a formal engagement |
 | IAM/PAM products | Keycloak lab; Okta migration map | Practised transferable IAM standards and lifecycle controls | SailPoint, Saviynt, ForgeRock, CyberArk, BeyondTrust, or Okta production experience |
 
 ## Implemented control objectives
@@ -39,4 +39,3 @@ The closest boundary is used for each claim:
 - **Automation:** result plus provider read-back plus audit event.
 - **Evidence integrity:** independent recalculation of the full hash chain.
 - **Repository quality:** tests, lint, ignored secrets, and live GitHub read-back.
-

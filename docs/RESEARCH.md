@@ -62,7 +62,7 @@ Frame it as standards practice, include production next steps, and map it to Okt
 **Risks**
 
 - signup requires an eligible unique business email and can be location/account dependent;
-- external tenant availability would block a reproducible beginner walkthrough.
+- external tenant availability would block a reproducible public lab.
 
 **Decision**
 
@@ -79,9 +79,9 @@ Keep the integration provider-neutral and add the migration plan, but do not mak
 - dependable public tenants and full lab access are not generally available;
 - a mock would create weaker evidence and encourage overstated product claims.
 
-## Inference: what should appeal to the hiring manager
+## Project-selection criteria
 
-This is an inference from the role and Deloitte service material, not a statement from Deloitte about this repository:
+The selected scope follows these role- and service-derived criteria. This is an inference, not a statement from Deloitte about this repository:
 
 1. lead with the client/business problem;
 2. show full lifecycle instead of only SSO;
@@ -89,4 +89,3 @@ This is an inference from the role and Deloitte service material, not a statemen
 4. test failures and troubleshoot provider behavior;
 5. produce operational evidence and a runbook;
 6. explain the solution clearly and disclose limitations.
-

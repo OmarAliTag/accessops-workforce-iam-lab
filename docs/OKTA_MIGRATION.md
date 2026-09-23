@@ -44,7 +44,7 @@ Every method must return the same safe `Identity` model so policy, idempotency, 
 8. Run the existing provider contract and lifecycle test matrix.
 9. Re-run browser ALLOW and 403 evidence.
 10. Capture System Log and access-review evidence.
-11. Update the phone explanation only after every boundary is verified.
+11. Update public project claims only after every boundary is verified.
 
 ## Gate before claiming Okta experience
 
@@ -57,4 +57,3 @@ Do not add Okta to the project headline or CV until all of these are true:
 - MFA policy is enforced for the privileged identity;
 - failures and retries behave safely;
 - evidence contains no tenant secret, token, or real user data.
-
